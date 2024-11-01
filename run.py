@@ -4,6 +4,9 @@
 DDNS
 @author: New Future
 @modified: rufengsuixing
+@modified: siiway/wyf9
+@warning: this version is only for siiway team use
+@warning: Dont use it if you aren't team menber! it may have many problems!
 """
 from __future__ import print_function
 from time import ctime, asctime
@@ -18,16 +21,19 @@ from util import ip
 from util.cache import Cache
 from util.config import init_config, get_config
 
-__version__ = "${BUILD_VERSION}@${BUILD_DATE}"  # CI 时会被Tag替换
+# __version__ = "${BUILD_VERSION}@${BUILD_DATE}"  # CI 时会被Tag替换
+__version__ = 'SiiWayModedVer'
 __description__ = "automatically update DNS records to dynamic local IP [自动更新DNS记录指向本地IP]"
 __doc__ = """
 ddns[%s]
+(i) SiiWay Self-Use Moded [SiiWay 修改自用]: https://github.com/siiway/DDNS
 (i) homepage or docs [文档主页]: https://ddns.newfuture.cc/
 (?) issues or bugs [问题和帮助]: https://github.com/NewFuture/DDNS/issues
 Copyright (c) New Future (MIT License)
 """ % (__version__)
 
-environ["DDNS_VERSION"] = "${BUILD_VERSION}"
+# environ["DDNS_VERSION"] = "${BUILD_VERSION}"
+environ["DDNS_VERSION"] = "SiiWayModedVer"
 
 if getattr(sys, 'frozen', False):
     # https://github.com/pyinstaller/pyinstaller/wiki/Recipe-OpenSSL-Certificate
